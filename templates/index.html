@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Summaries</title>
+</head>
+<body>
+    <h1>Daily Weather Summaries</h1>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Avg Temperature</th>
+            <th>Max Temperature</th>
+            <th>Min Temperature</th>
+            <th>Dominant Condition</th>
+        </tr>
+        {% for summary in summaries %}
+        <tr>
+            <td>{{ summary.date }}</td>
+            <td>{{ summary.location }}</td>
+            <td>{{ summary.avg_temperature }}</td>
+            <td>{{ summary.max_temperature }}</td>
+            <td>{{ summary.min_temperature }}</td>
+            <td>{{ summary.dominant_condition }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
